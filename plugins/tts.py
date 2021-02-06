@@ -7,7 +7,7 @@ from userge import Message, userge
 
 
 @userge.on_cmd(
-    "tts", about={"header": "Text To Speech", "examples": "{tr}tts en|Userge"}
+    "tts", about={"header": "Text To Speech", "examples": "{tr}tts en|Lynx"}
 )
 async def text_to_speech(message: Message):
     req_file_name = "gtts.mp3"
