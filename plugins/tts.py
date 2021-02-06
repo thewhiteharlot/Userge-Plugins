@@ -6,9 +6,7 @@ from hachoir.parser import createParser as CPR
 from userge import Message, userge
 
 
-@userge.on_cmd(
-    "tts", about={"header": "Text To Speech", "examples": "{tr}tts en|Lynx"}
-)
+@userge.on_cmd("tts", about={"header": "Text To Speech", "examples": "{tr}tts en|Lynx"})
 async def text_to_speech(message: Message):
     req_file_name = "gtts.mp3"
     inp_text = message.input_str
