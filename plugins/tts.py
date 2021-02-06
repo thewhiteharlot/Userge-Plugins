@@ -10,12 +10,12 @@ from userge import Message, userge
 async def text_to_speech(message: Message):
     req_file_name = "gtts.mp3"
     inp_text = message.input_str
-    if ("-" not in inp_text) or not inp_text:
+    if ("|" not in inp_text) or not inp_text:
         await message.edit("Pathetic")
         return
     await message.edit("Processing.")
-    def_lang = "pt"
-    def_lang, text = inp_text.split("-")
+    def_lang = "en"
+    def_lang, text = inp_text.split("|")
     try:
         await message.edit("Processing..")
         speeched = gTTS(text, lang=def_lang.strip())
