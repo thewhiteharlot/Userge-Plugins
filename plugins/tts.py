@@ -37,7 +37,7 @@ async def text_to_speech(message: Message):
             duration=a_len,
             performer=a_perf,
             title=a_title,
-            voice_note=true
+            voice_note=true,
         )
         os.remove(req_file_name)
         await message.delete()
